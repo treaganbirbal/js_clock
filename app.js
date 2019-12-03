@@ -6,9 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let time = new Date()
 
-    // window.setInterval(() => {
-    // console.log(time), 5000})
-    
+   
+
+    const setDate = () => {
+        const now = new Date()
+        const seconds = now.getSeconds()
+        const secondsDegrees = ((seconds/60) * 360)
+        secHand.style.transform = `rotate(${secondsDegrees}deg)`
+        console.log(seconds)
+    }
+
+  setInterval(setDate, 1000)
+  
+
     document.querySelectorAll('.hand')[2].addEventListener('click', (event) => {
        console.log(event.target)
     })
