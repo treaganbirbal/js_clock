@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         secHand.style.transform = `rotate(${secondsDegrees}deg)`
 
         const minutes = now.getMinutes()
-        const minsDegrees = ((minutes/60) * 360) + 90;
+        const minsDegrees = ((minutes/60) * 360) + 90.1;
         minHand.style.transform = `rotate(${minsDegrees}deg)`
 
         const hours = now.getHours() - 12
